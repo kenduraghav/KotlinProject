@@ -31,7 +31,7 @@ sealed interface ItemResponse {
 
 }
 
-private object ItemResponseSerializer :
+internal object ItemResponseSerializer :
         JsonContentPolymorphicSerializer<ItemResponse>(ItemResponse::class) {
     override fun selectDeserializer(element: JsonElement): DeserializationStrategy<ItemResponse> = when {
 

@@ -1,6 +1,8 @@
 package di
 
 import api.NewsApiClient
+import api.client
+import io.ktor.client.HttpClient
 import org.example.project.MainViewModel
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
@@ -18,6 +20,7 @@ fun initKoin() {
 
 val commonModule = module {
     single<NewsApiClient>()
+    single<HttpClient> { client }
     viewModel<MainViewModel>()
 }
 
