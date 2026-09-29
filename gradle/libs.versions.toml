@@ -17,6 +17,8 @@ kotlinx-coroutines = "1.11.0"
 material3 = "1.12.0-alpha03"
 ktor="3.6.0"
 apollo="5.2.0"
+koin="4.2.2"
+koin-compiler="1.2.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -46,6 +48,14 @@ ktor-serialization-json =  { module =  "io.ktor:ktor-serialization-kotlinx-json"
 kotlinx-coroutines-core =  { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref =  "kotlinx-coroutines" }
 kotlinx-coroutines-android =  { module = "org.jetbrains.kotlinx:kotlinx-coroutines.android", version.ref =  "kotlinx-coroutines" }
 apollo-runtime =  { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo" }
+koin-bom = { module = "io.insert-koin:koin-bom" , version.ref = "koin" }
+koin-core =  { module =  "io.insert-koin:koin-core" }
+koin-compose = { module = "io.insert-koin:koin-compose" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-test = { module = "io.insert-koin:koin-test" }
+koin-annotations =  { module = "io.insert-koin:koin-annotations" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -56,3 +66,4 @@ kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinxSerialization =  { id = "org.jetbrains.kotlin.plugin.serialization" , version = "2.3.20" }
 apolloGraphql = { id = "com.apollographql.apollo", version.ref = "apollo" }
+koinCompiler = { id = "io.insert-koin.compiler.plugin", version.ref = "koin-compiler" }

@@ -12,13 +12,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.example.project.github.SearchTopReposQuery
 
-class MainViewModel : ViewModel() {
+class MainViewModel(
+    private val newsApiClient: NewsApiClient
+) : ViewModel() {
 
     private val _uiState = MutableStateFlow(UiState(ShowContent.NONE,emptyList(), topRepos = emptyList()))
 
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
-
-    val newsApiClient: NewsApiClient = NewsApiClient()
 
     suspend fun getTopStories() {
         val topStories = newsApiClient.getTopStories()

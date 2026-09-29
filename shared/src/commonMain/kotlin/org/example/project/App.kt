@@ -22,14 +22,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import api.ItemResponse
 import kotlinx.coroutines.launch
 import org.example.project.github.SearchTopReposQuery
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 @Preview
-fun App(viewModel: MainViewModel = viewModel { MainViewModel() }) {
+fun App(viewModel: MainViewModel = koinViewModel()) {
 
     val scope = rememberCoroutineScope()
 
